@@ -1,0 +1,17 @@
+{
+  "player": "Memphis Depay",
+  "event_explain": {
+    "Clean sheets": {
+      "value": 1,
+      "points": 1
+    },
+    "Minutes played": {
+      "value": 76,
+      "points": 2
+    },
+    "Goals scored": {
+      "value": 1,
+      "points": 5
+    }
+  }
+}

@@ -1,0 +1,36 @@
+//
+   Created by ole.hellenes on 01.10.2015.
+
+extends layout
+
+block content
+
+   h1 API How-To
+
+   .endpoint
+      p.noclick-url /api/players/
+      p <strong>Type:</strong> GET
+      p <strong>ContentType:</strong> JSON
+      p <strong>Description:</strong> <br/>
+      p Returns all registered players.
+      p <strong>Example:</strong> <br/>
+      p.code-sample Example here.
+
+
+   .endpoint
+      p.noclick-url /api/players/:player_id
+      p <strong>Type:</strong> GET
+      p <strong>ContentType:</strong> JSON
+      p <strong>Description:</strong> <br/>
+      p Returns a single player with the specified :player_id if found.
+      p <strong>Example:</strong> <br/>
+      p.code-sample Example here.
+
+   .endpoint
+      p.noclick-url /api/teams/
+      p <strong>Type:</strong> GET
+      p <strong>ContentType:</strong> JSON
+      p <strong>Description:</strong> <br/>
+      p Returns all registered teams
+      p <strong>Example:</strong> <br/>
+      p.code-sample Example here.

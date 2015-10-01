@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  .endpoints
+    - for (var endpoint in endpoints)
+      .endpoint-item
+        p endpoint: <span>#{endpoint.endpoint}</span>
+        p type: <span>#{endpoint.type}</span>
+        p example: <span>#{endpoint.example}</span>
