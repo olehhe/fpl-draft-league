@@ -3,25 +3,38 @@
  */
 
 var express = require('express');
+var fplApi = require('../services/fplApi');
 var router = express.Router();
 
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
 
-    res.render('api', {
-        title: "API How-To"
+  res.render('api', {
+    title: "API How-To"
+  });
+
+});
+
+router.get('/players', function (req, res, next) {
+
+  //res.sendfile('././data/mock/players.json');
+  fplApi.getPlayers()
+
+    .then(function (result) {
+      res.send(result);
     });
 
-});
+  //res.sendfile(JSON.stringify(players));
 
-router.get('/players', function(req, res, next) {
-
-    res.sendfile('././data/mock/players.json');
+  //res.send(players);
 
 });
 
-router.get('players/:player_id', function(req, res, next) {
+router.get('/players/:player_id', function (req, res, next) {
 
-    res.sendfile('././data/mock/player.json');
+  fplApi.getPlayer(req.params.player_id)
+    .then(function(data) {
+      res.send(data);
+    });
 
 });
 
