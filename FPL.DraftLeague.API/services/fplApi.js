@@ -24,6 +24,17 @@ fplApi.getPlayers = function () {
 
         cb(null, JSON.parse(body));
       });
+    /*
+     return function(cb) {
+        fplApi.getPlayer(playerId)
+          .then(function(player) {
+            cb(null, player);
+          })
+          .error(function(err) {
+            return cb(err);
+          });
+      }
+     */
     }
   }
 
@@ -44,9 +55,10 @@ fplApi.getPlayers = function () {
       return;
     }
 
-    for (var i = 0; i < data.length; i++) {
-      allPlayers[i] = esjson.elasticate(data[i]);
-    }
+    allPlayers = data;
+    allPlayers.map(function(player) {
+      return esjson.elasticate(player);
+    });
 
     deferred.resolve(allPlayers);
   });
