@@ -3,7 +3,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports =  {
-  entry: './src/index.js',
+  entry: './src/app/scripts/index.js',
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '',
@@ -30,13 +30,13 @@ module.exports =  {
   },
   resolve: {
     alias: {},
-    modulesDirectories: ['node_modules', 'app', 'shared']
+    modulesDirectories: ['node_modules', 'shared']
   },
   plugins: [
     new webpack.ProvidePlugin({}),
 
     new HtmlWebpackPlugin({
-      template: 'src/shared/assets/html/index.html'
+      template: 'src/app/index.html'
     })
   ]
 };

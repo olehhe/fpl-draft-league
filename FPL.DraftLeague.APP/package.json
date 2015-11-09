@@ -4,10 +4,12 @@
   "description": "FPL DraftLeague Application",
   "main": "index.js",
   "dependencies": {
+    "history": "^1.13.0",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "react-loader": "^2.0.0",
-    "react-router": "^0.13.5"
+    "react-router": "^1.0.0-rc4",
+    "reflux": "^0.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.1.2",
