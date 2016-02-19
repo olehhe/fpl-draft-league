@@ -19,5 +19,6 @@ export default function update(req) {
         }
         resolve(widget);
       }
+    }, 1500); // simulate async db write
   });
 }
